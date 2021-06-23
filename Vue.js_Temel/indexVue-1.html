@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Vue.js | Yazılımbilimi</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+</head>
+<body>
+
+<div id="app">
+	<h3>{{title}}</h3>
+	<button>{{buttonTitle}}</button>
+	<p>{{paragraph}}</p>
+	<p v-text="paragraph"></p>
+	<p v-bind:href="link" v-bind:data-id="dataId"></p>
+	<p :href="link" v-bind:data-id="dataId"></p>
+
+	<p v-html="details"></p>
+
+</div>
+
+
+
+
+<script>
+	new Vue({
+		el:"#app",
+		data:{
+			title:"test başlık",
+			buttonTitle:"Tıkla Gelsin..",
+			paragraph:"lorem ipsum dolor sit amet",
+			link: "keremunce.great-site.com",
+			dataId: "1",
+			details: "<b>Bu bir haber detayıdır... </b>"
+		}
+	})
+</script>
+
+</body>
+</html>
